@@ -27,6 +27,8 @@ permissions:
                       
                     - name: Upload Static Files
                       uses: actions/upload-pages-artifact@v4
+                      with:
+                        path:"."
                       
                     - name: Deploy to Github Pages
                       uses: actions/deploy-pages@v4  
