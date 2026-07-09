@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Engineer | Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --accent-color: #2ea44f;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --border-color: #30363d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .terminal-badge {
+            background-color: var(--border-color);
+            color: var(--accent-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: "$ ";
+            color: var(--accent-color);
+            font-family: monospace;
+            margin-right: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 24px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-color);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tag {
+            background: #21262d;
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-family: monospace;
+        }
+
+        .skills-category {
+            margin-bottom: 20px;
+        }
+
+        .skills-category h4 {
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <div class="terminal-badge">~/status: open_for_opportunities</div>
+            <h1>Your Name</h1>
+            <p class="subtitle">DevOps & Cloud Infrastructure Engineer</p>
+            <div class="social-links">
+                <a href="https://github.com" target="_blank">GitHub</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="mailto:your.email@example.com">Email</a>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>cat about_me.txt</h2>
+            <p>Passionate DevOps engineer focused on automating software delivery pipelines, managing cloud infrastructure as code, and ensuring high availability. Experienced in bridging the gap between development and operations teams to accelerate delivery cycles safely.</p>
+        </section>
+
+        <section id="skills">
+            <h2>terraform output skills</h2>
+            
+            <div class="skills-category">
+                <h4>Cloud & Infrastructure</h4>
+                <div class="tag-container">
+                    <span class="tag">AWS / Azure / GCP</span>
+                    <span class="tag">Terraform</span>
+                    <span class="tag">OpenToFu</span>
+                    <span class="tag">Ansible</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h4>Containers & Orchestration</h4>
+                <div class="tag-container">
+                    <span class="tag">Docker</span>
+                    <span class="tag">Kubernetes</span>
+                    <span class="tag">Helm</span>
+                    <span class="tag">ArgoCD</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h4>CI/CD & Automation</h4>
+                <div class="tag-container">
+                    <span class="tag">GitHub Actions</span>
+                    <span class="tag">GitLab CI</span>
+                    <span class="tag">Jenkins</span>
+                    <span class="tag">Python / Bash</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h4>Observability & Core</h4>
+                <span class="tag-container">
+                    <span class="tag">Prometheus</span>
+                    <span class="tag">Grafana</span>
+                    <span class="tag">ELK Stack</span>
+                    <span class="tag">Linux System Admin</span>
+                </span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>git log --oneline projects</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <h3>Multi-Region Kubernetes Deployment</h3>
+                    <p>Designed and deployed a highly available EKS cluster spread across multiple AWS regions using Terraform and GitOps practices with ArgoCD.</p>
+                    <div class="tag-container">
+                        <span class="tag">AWS</span>
+                        <span class="tag">EKS</span>
+                        <span class="tag">Terraform</span>
+                        <span class="tag">ArgoCD</span>
+                    </div>
+                    <a href="#" class="project-link">View Repository →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Automated Secure CI/CD Pipeline</h3>
+                    <p>Built a reusable GitHub Actions workflow that integrates automated unit testing, container vulnerability scanning, and semantic versioned releases.</p>
+                    <div class="tag-container">
+                        <span class="tag">GitHub Actions</span>
+                        <span class="tag">Trivy</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                    <a href="#" class="project-link">View Repository →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Centralized Metrics & Alerts System</h3>
+                    <p>Provisioned a cluster-wide monitoring system using Prometheus and Grafana, featuring custom alerting rule integration for Slack notification triggers.</p>
+                    <div class="tag-container">
+                        <span class="tag">Prometheus</span>
+                        <span class="tag">Grafana</span>
+                        <span class="tag">Slack API</span>
+                    </div>
+                    <a href="#" class="project-link">View Repository →</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>vault read certifications</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>AWS Certified Solutions Architect</h3>
+                    <p>Issued by Amazon Web Services</p>
+                </div>
+                <div class="card">
+                    <h3>Certified Kubernetes Administrator (CKA)</h3>
+                    <p>Issued by The Linux Foundation</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>built_with: "Semantic HTML & CSS" | deployment: "Static Page"</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
