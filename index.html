@@ -1,737 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Kaustubh Shirname | DevOps Engineer</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-
-font-family:'Poppins',sans-serif;
-background:#070b17;
-color:white;
-overflow-x:hidden;
-
-}
-
-/* Scrollbar */
-
-::-webkit-scrollbar{
-width:10px;
-}
-
-::-webkit-scrollbar-track{
-background:#101827;
-}
-
-::-webkit-scrollbar-thumb{
-
-background:linear-gradient(#00dbde,#6a5cff);
-border-radius:50px;
-
-}
-
-/* Background */
-
-body::before{
-
-content:"";
-position:fixed;
-inset:0;
-
-background:
-radial-gradient(circle at 15% 20%,rgba(0,255,255,.15),transparent 30%),
-radial-gradient(circle at 85% 10%,rgba(112,0,255,.15),transparent 25%),
-radial-gradient(circle at 60% 90%,rgba(0,120,255,.18),transparent 30%),
-#070b17;
-
-z-index:-3;
-
-}
-
-/* Aurora */
-
-.aurora{
-
-position:fixed;
-width:140%;
-height:140%;
-
-left:-20%;
-top:-20%;
-
-background:
-
-linear-gradient(45deg,
-rgba(0,255,255,.08),
-rgba(110,70,255,.08),
-rgba(0,153,255,.08));
-
-filter:blur(100px);
-
-animation:aurora 15s infinite alternate ease-in-out;
-
-z-index:-2;
-
-}
-
-@keyframes aurora{
-
-0%{
-
-transform:rotate(0deg) scale(1);
-
-}
-
-100%{
-
-transform:rotate(20deg) scale(1.3);
-
-}
-
-}
-
-/* Floating blobs */
-
-.blob{
-
-position:fixed;
-
-border-radius:50%;
-filter:blur(80px);
-
-opacity:.35;
-
-z-index:-1;
-
-animation:float 12s infinite ease-in-out;
-
-}
-
-.blob1{
-
-width:350px;
-height:350px;
-
-background:#00f7ff;
-
-top:5%;
-left:5%;
-
-}
-
-.blob2{
-
-width:280px;
-height:280px;
-
-background:#7b2fff;
-
-bottom:5%;
-right:5%;
-
-animation-delay:4s;
-
-}
-
-.blob3{
-
-width:250px;
-height:250px;
-
-background:#0066ff;
-
-left:45%;
-top:60%;
-
-animation-delay:2s;
-
-}
-
-@keyframes float{
-
-0%,100%{
-
-transform:translateY(0);
-
-}
-
-50%{
-
-transform:translateY(-60px);
-
-}
-
-}
-
-/* Navbar */
-
-header{
-
-position:fixed;
-top:0;
-width:100%;
-z-index:100;
-
-backdrop-filter:blur(18px);
-
-background:rgba(255,255,255,.05);
-
-border-bottom:1px solid rgba(255,255,255,.08);
-
-}
-
-nav{
-
-max-width:1300px;
-margin:auto;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:20px;
-
-}
-
-.logo{
-
-font-size:28px;
-
-font-weight:700;
-
-background:linear-gradient(45deg,#00dbde,#6a5cff);
-
--webkit-background-clip:text;
-
--webkit-text-fill-color:transparent;
-
-}
-
-nav ul{
-
-display:flex;
-
-list-style:none;
-
-gap:35px;
-
-}
-
-nav a{
-
-text-decoration:none;
-
-color:white;
-
-font-weight:500;
-
-transition:.4s;
-
-position:relative;
-
-}
-
-nav a::after{
-
-content:"";
-
-position:absolute;
-
-bottom:-8px;
-
-left:0;
-
-height:2px;
-
-width:0;
-
-background:#00dbde;
-
-transition:.4s;
-
-}
-
-nav a:hover::after{
-
-width:100%;
-
-}
-
-nav a:hover{
-
-color:#00ffff;
-
-}
-
-/* Hero */
-
-.hero{
-
-min-height:100vh;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-padding:120px 10%;
-
-}
-
-.hero-container{
-
-display:grid;
-
-grid-template-columns:1.1fr .9fr;
-
-gap:80px;
-
-align-items:center;
-
-max-width:1300px;
-
-width:100%;
-
-}
-
-.hero-text h3{
-
-font-size:20px;
-
-font-weight:400;
-
-color:#8ab4ff;
-
-}
-
-.hero-text h1{
-
-font-size:68px;
-
-margin-top:15px;
-
-line-height:1.1;
-
-}
-
-.hero-text h1 span{
-
-background:linear-gradient(45deg,#00dbde,#6a5cff);
-
--webkit-background-clip:text;
-
--webkit-text-fill-color:transparent;
-
-}
-
-.typing{
-
-font-size:26px;
-
-margin:25px 0;
-
-font-weight:600;
-
-color:#00ffff;
-
-height:40px;
-
-}
-
-.hero-text p{
-
-color:#cfd8dc;
-
-line-height:1.8;
-
-font-size:17px;
-
-max-width:650px;
-
-}
-
-.buttons{
-
-margin-top:40px;
-
-display:flex;
-
-gap:20px;
-
-flex-wrap:wrap;
-
-}
-
-.btn{
-
-padding:16px 38px;
-
-border-radius:50px;
-
-text-decoration:none;
-
-font-weight:600;
-
-transition:.4s;
-
-}
-
-.primary{
-
-background:linear-gradient(45deg,#00dbde,#6a5cff);
-
-color:white;
-
-}
-
-.primary:hover{
-
-transform:translateY(-5px);
-
-box-shadow:0 15px 40px rgba(0,255,255,.3);
-
-}
-
-.secondary{
-
-border:1px solid rgba(255,255,255,.2);
-
-backdrop-filter:blur(20px);
-
-color:white;
-
-}
-
-.secondary:hover{
-
-background:rgba(255,255,255,.08);
-
-transform:translateY(-5px);
-
-}
-
-.hero-image{
-
-display:flex;
-
-justify-content:center;
-
-}
-
-.glass-card{
-
-width:380px;
-height:460px;
-
-background:rgba(255,255,255,.07);
-
-border:1px solid rgba(255,255,255,.15);
-
-backdrop-filter:blur(30px);
-
-border-radius:35px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-position:relative;
-
-overflow:hidden;
-
-transition:.5s;
-
-}
-
-.glass-card:hover{
-
-transform:translateY(-12px) rotate(2deg);
-
-box-shadow:0 25px 60px rgba(0,255,255,.25);
-
-}
-
-.glass-card::before{
-
-content:"";
-
-position:absolute;
-
-width:160%;
-
-height:160%;
-
-background:
-
-linear-gradient(
-
-45deg,
-
-transparent,
-
-rgba(255,255,255,.25),
-
-transparent
-
-);
-
-transform:rotate(45deg);
-
-left:-150%;
-
-transition:1.2s;
-
-}
-
-.glass-card:hover::before{
-
-left:120%;
-
-}
-
-.avatar{
-
-font-size:170px;
-
-color:white;
-
-opacity:.9;
-
-}
-
-.scroll{
-
-position:absolute;
-
-bottom:30px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-font-size:30px;
-
-animation:bounce 2s infinite;
-
-}
-
-@keyframes bounce{
-
-0%,100%{
-
-transform:translate(-50%,0);
-
-}
-
-50%{
-
-transform:translate(-50%,15px);
-
-}
-
-}
-
-section{
-
-padding:120px 10%;
-
-}
-
-.section-title{
-
-text-align:center;
-
-font-size:48px;
-
-margin-bottom:80px;
-
-background:linear-gradient(45deg,#00dbde,#6a5cff);
-
--webkit-background-clip:text;
-
--webkit-text-fill-color:transparent;
-
-}
-
-@media(max-width:992px){
-
-.hero-container{
-
-grid-template-columns:1fr;
-
-text-align:center;
-
-}
-
-.hero-text h1{
-
-font-size:52px;
-
-}
-
-.hero-image{
-
-order:-1;
-
-}
-
-nav ul{
-
-display:none;
-
-}
-
-}
-
-@media(max-width:600px){
-
-.hero-text h1{
-
-font-size:40px;
-
-}
-
-.typing{
-
-font-size:20px;
-
-}
-
-.glass-card{
-
-width:300px;
-
-height:360px;
-
-}
-
-.avatar{
-
-font-size:120px;
-
-}
-
-}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:linear-gradient(135deg,#0f172a,#111827,#1e293b);color:#fff;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 20% 20%,#00f5ff33,transparent 30%),radial-gradient(circle at 80% 70%,#8b5cf633,transparent 30%);animation:bg 12s infinite alternate}
+@keyframes bg{to{transform:scale(1.2) rotate(20deg)}}
+main{max-width:1050px;margin:auto;padding:60px 20px}
+.card{background:#ffffff12;border:1px solid #ffffff22;backdrop-filter:blur(18px);border-radius:25px;padding:35px;transition:.4s}
+.card:hover{transform:translateY(-8px);box-shadow:0 20px 50px #00f5ff30}
+h1{font-size:3rem;background:linear-gradient(90deg,#00f5ff,#8b5cf6);-webkit-background-clip:text;color:transparent}
+h2{margin:25px 0 12px;color:#00f5ff}
+p{opacity:.9;line-height:1.7}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}
+.tags span{padding:8px 15px;border-radius:30px;background:#ffffff18;transition:.3s}
+.tags span:hover{background:#00f5ff;color:#000;transform:scale(1.08)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:25px}
+.box{padding:20px;border-radius:18px;background:#ffffff10;transition:.35s}
+.box:hover{background:#00f5ff20;transform:translateY(-6px)}
+a{color:#00f5ff;text-decoration:none}
+footer{text-align:center;padding:35px;opacity:.7}
 </style>
-
 </head>
-
 <body>
 
-<div class="aurora"></div>
+<main>
 
-<div class="blob blob1"></div>
+<div class="card">
+<h1>Kaustubh Shirname</h1>
+<h3>Azure • AWS • DevOps Engineer</h3>
+<p>DevOps Engineer with <b>4+ years</b> of experience building cloud-native platforms on Azure & AWS. Specialized in Kubernetes (AKS/EKS), Docker, Terraform, CI/CD, DevSecOps, Monitoring and Infrastructure Automation.</p>
 
-<div class="blob blob2"></div>
-
-<div class="blob blob3"></div>
-
-<header>
-
-<nav>
-
-<div class="logo">
-Kaustubh.
+<div class="tags">
+<span>Azure</span><span>AWS</span><span>AKS</span><span>Docker</span>
+<span>Kubernetes</span><span>Terraform</span><span>Azure DevOps</span>
+<span>GitHub Actions</span><span>Jenkins</span><span>Linux</span>
+<span>Bash</span><span>Grafana</span><span>Prometheus</span>
+</div>
 </div>
 
-<ul>
+<div class="grid">
 
-<li><a href="#about">About</a></li>
-
-<li><a href="#skills">Skills</a></li>
-
-<li><a href="#experience">Experience</a></li>
-
-<li><a href="#projects">Projects</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<div class="hero-container">
-
-<div class="hero-text">
-
-<h3>Hello, I'm</h3>
-
-<h1>
-Kaustubh <span>Shirname</span>
-</h1>
-
-<div class="typing">
-DevOps Engineer
+<div class="box">
+<h2>Experience</h2>
+<p><b>LTIMindtree</b><br>DHL Parcel UK & Honda UK</p>
+<p>✔ 60+ Production Releases<br>
+✔ 50+ CI/CD Pipelines<br>
+✔ 99% Deployment Success<br>
+✔ AKS & Azure Cloud Architecture</p>
 </div>
 
-<p>
+<div class="box">
+<h2>Highlights</h2>
+<p>• Terraform IaC<br>
+• Azure Monitor & App Insights<br>
+• DevSecOps & WAF<br>
+• Azure Functions<br>
+• Microservices Deployment<br>
+• Networking & Security</p>
+</div>
 
-Passionate DevOps Engineer with over 4 years of experience in designing scalable cloud infrastructure, building CI/CD pipelines, automating deployments, and optimizing cloud-native applications across Azure, AWS, and Google Cloud Platform. I enjoy creating reliable, secure, and efficient systems using Kubernetes, Terraform, Docker, Jenkins, GitHub Actions, Linux, and Infrastructure as Code.
+<div class="box">
+<h2>Certifications</h2>
+<p>AZ-400<br>AZ-204<br>AZ-900<br>DP-900<br>GenAI Certified</p>
+</div>
 
-</p>
-
-<div class="buttons">
-
-<a href="#projects" class="btn primary">
-View Projects
-</a>
-
-<a href="#contact" class="btn secondary">
-Let's Connect
-</a>
-
+<div class="box">
+<h2>Contact</h2>
+<p>📧 kaustubhshirname@outlook.com</p>
+<p>📱 9404781508</p>
+<p><a href="https://linkedin.com/in/kaustubhshirname">LinkedIn</a></p>
+<p><a href="https://github.com/kaustubhshirname">GitHub</a></p>
 </div>
 
 </div>
 
-<div class="hero-image">
+<footer>
+Designed with ❤️ | Glassmorphism UI • DevOps Portfolio • 2026
+</footer>
 
-<div class="glass-card">
+</main>
 
-<i class='bx bx-code-alt avatar'></i>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="scroll">
-
-<i class='bx bx-chevrons-down'></i>
-
-</div>
-
-</section>
-
-<!-- ========= PART 2 STARTS HERE IN NEXT MESSAGE ========= -->
+</body>
+</html>
